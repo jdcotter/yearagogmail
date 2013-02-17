@@ -4,7 +4,13 @@
 		text: 'One Year Ago',
 		onclick: "location.href='" + yearago + "'",
 		class: 'gmailLink'
-	}).insertAfter('#oneyear');
+	}).insertAfter('#btnLinksStart');
+	var twoyearsago = genGmailLink(2);
+	$('<button></button>', {
+		text: 'Two Years Ago',
+		onclick: "location.href='" + twoyearsago + "'",
+		class: 'gmailLink'
+	}).insertAfter('#btnLinksStart');
 })();
 
 /*
@@ -24,8 +30,8 @@ function  genGmailLink(numYears) {
 
 
 	// yearAgo = Date.parse("t - 1 y").toString('yyyy/mm/dd');
-	yearAgo = Date.today().add(-1).years().toString('yyyy/MM/dd');
-	yearAgoOneDay = Date.today().add( {days: -1, years: -1}).toString('yyyy/MM/dd');
+	yearAgo = Date.today().add(-numYears).years().toString('yyyy/MM/dd');
+	yearAgoOneDay = Date.today().add( {days: -numYears, years: -numYears}).toString('yyyy/MM/dd');
 	beforeAfter = "after:" + yearAgoOneDay + " before:" + yearAgo;
 	encodedBeforAfter =	encodeURIComponent(beforeAfter);
 	return gmailUrl + encodedBeforAfter;
