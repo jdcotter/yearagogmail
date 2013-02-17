@@ -1,16 +1,39 @@
 (function() {
-	var yearago = genGmailLink(1);
+	var fiveyearsago = genGmailLink(5);
 	$('<button></button>', {
-		text: 'One Year Ago',
-		onclick: "location.href='" + yearago + "'",
+		text: 'Five Years Ago',
+		onclick: "location.href='" + fiveyearsago + "'",
 		class: 'gmailLink'
 	}).insertAfter('#btnLinksStart');
+	$('<br/>').insertAfter('#btnLinksStart');
+	var fouryearsago = genGmailLink(4);
+	$('<button></button>', {
+		text: 'Four Years Ago',
+		onclick: "location.href='" + fouryearsago + "'",
+		class: 'gmailLink'
+	}).insertAfter('#btnLinksStart');
+	$('<br/>').insertAfter('#btnLinksStart');
+	var threeyearsago = genGmailLink(3);
+	$('<button></button>', {
+		text: 'Three Years Ago',
+		onclick: "location.href='" + threeyearsago + "'",
+		class: 'gmailLink'
+	}).insertAfter('#btnLinksStart');
+	$('<br/>').insertAfter('#btnLinksStart');
 	var twoyearsago = genGmailLink(2);
 	$('<button></button>', {
 		text: 'Two Years Ago',
 		onclick: "location.href='" + twoyearsago + "'",
 		class: 'gmailLink'
 	}).insertAfter('#btnLinksStart');
+	$('<br/>').insertAfter('#btnLinksStart');
+	var yearago = genGmailLink(1);
+	$('<button></button>', {
+		text: 'One Year Ago',
+		onclick: "location.href='" + yearago + "'",
+		class: 'gmailLink'
+	}).insertAfter('#btnLinksStart');
+	$('<br/>').insertAfter('#btnLinksStart');
 })();
 
 /*
